@@ -21,6 +21,8 @@ namespace lab6
             this.encargado_bloque = encargado_bloque;
         }
 
+        public List<Persona> Personal_general { get => personal_general; set => personal_general = value; }
+
         public void Info_bloque()
         {
             Console.WriteLine("Nombre de Bloque: " + name + "// Encargado de Bloque: " + encargado_bloque.Name);

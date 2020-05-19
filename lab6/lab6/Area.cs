@@ -21,6 +21,7 @@ namespace lab6
             this.encargado_area = encargado_area;
         }
 
+        public List<Departamento> Lista_departamentos { get => lista_departamentos; set => lista_departamentos = value; }
 
         public void Info_area()
         {

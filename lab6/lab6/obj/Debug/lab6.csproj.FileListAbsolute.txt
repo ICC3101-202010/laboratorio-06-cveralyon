@@ -4,3 +4,9 @@ C:\Users\cvera\Desktop\laboratorio-06-cveralyon-master\lab6\lab6\obj\Debug\lab6.
 C:\Users\cvera\Desktop\laboratorio-06-cveralyon-master\lab6\lab6\obj\Debug\lab6.csproj.CoreCompileInputs.cache
 C:\Users\cvera\Desktop\laboratorio-06-cveralyon-master\lab6\lab6\obj\Debug\lab6.exe
 C:\Users\cvera\Desktop\laboratorio-06-cveralyon-master\lab6\lab6\obj\Debug\lab6.pdb
+C:\Users\cvera\Desktop\labpoo\laboratorio-06-cveralyon\lab6\lab6\bin\Debug\lab6.exe
+C:\Users\cvera\Desktop\labpoo\laboratorio-06-cveralyon\lab6\lab6\bin\Debug\lab6.pdb
+C:\Users\cvera\Desktop\labpoo\laboratorio-06-cveralyon\lab6\lab6\obj\Debug\lab6.csprojAssemblyReference.cache
+C:\Users\cvera\Desktop\labpoo\laboratorio-06-cveralyon\lab6\lab6\obj\Debug\lab6.csproj.CoreCompileInputs.cache
+C:\Users\cvera\Desktop\labpoo\laboratorio-06-cveralyon\lab6\lab6\obj\Debug\lab6.exe
+C:\Users\cvera\Desktop\labpoo\laboratorio-06-cveralyon\lab6\lab6\obj\Debug\lab6.pdb

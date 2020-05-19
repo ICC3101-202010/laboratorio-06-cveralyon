@@ -11,9 +11,9 @@ namespace lab6
     [Serializable]
     public class Empresa
     {
-        private string name;
-        private int rut;
-        public List<Persona> Personal_empresa = new List<Persona>();
+        public string name;
+        public int rut;
+        public List<Persona> personal_empresa = new List<Persona>();
         public List<Area> lista_areas = new List<Area>();
         public List<Departamento> lista_dptos = new List<Departamento>();
         public List<Seccion> lista_secciones = new List<Seccion>();
@@ -21,7 +21,11 @@ namespace lab6
 
         public string Name { get => name; set => name = value; }
         public int Rut { get => rut; set => rut = value; }
-        
+        public List<Persona> Personal_empresa { get => personal_empresa; set => personal_empresa = value; }
+        public List<Area> Lista_areas { get => lista_areas; set => lista_areas = value; }
+        public List<Departamento> Lista_dptos { get => lista_dptos; set => lista_dptos = value; }
+        public List<Seccion> Lista_secciones { get => lista_secciones; set => lista_secciones = value; }
+        public List<Bloque> Lista_bloques { get => lista_bloques; set => lista_bloques = value; }
 
         public static int Numero(int o) // verifica que el input  sea un numero dentro del rango requerido
         {

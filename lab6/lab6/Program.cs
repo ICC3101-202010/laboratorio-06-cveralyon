@@ -133,10 +133,10 @@ namespace lab6
                         do
                         {
                             foreach (Persona p in empresa.Personal_empresa)
-                                if (p.Rut == id)
+                                if (p.rut == id)
                                 {
                                     Area area = new Area(ar, p);
-                                    empresa.lista_areas.Add(area);
+                                    empresa.Lista_areas.Add(area);
                                     w = 1;
                                     break;
                                 }
@@ -148,10 +148,10 @@ namespace lab6
                                 "Registre al Empleado:");
                             empresa.agregar_personal();
                             foreach (Persona p in empresa.Personal_empresa)
-                                if (p.Rut == id)
+                                if (p.rut == id)
                                 {
                                     Area area = new Area(ar, p);
-                                    empresa.lista_areas.Add(area);
+                                    empresa.Lista_areas.Add(area);
                                     w = 1;
                                     break;
                                 }
@@ -174,10 +174,10 @@ namespace lab6
                         do
                         {
                             foreach (Persona p in empresa.Personal_empresa)
-                                if (p.Rut == id)
+                                if (p.rut == id)
                                 {
                                     Departamento d = new Departamento(ar, p);
-                                    empresa.lista_dptos.Add(d);
+                                    empresa.Lista_dptos.Add(d);
                                     w = 1;
                                     break;
                                 }
@@ -189,10 +189,10 @@ namespace lab6
                                 "Registre al Empleado:");
                             empresa.agregar_personal();
                             foreach (Persona p in empresa.Personal_empresa)
-                                if (p.Rut == id)
+                                if (p.rut == id)
                                 {
                                     Departamento d = new Departamento(ar, p);
-                                    empresa.lista_dptos.Add(d);
+                                    empresa.Lista_dptos.Add(d);
                                     w = 1;
                                     break;
                                 }
@@ -214,10 +214,10 @@ namespace lab6
                         do
                         {
                             foreach (Persona p in empresa.Personal_empresa)
-                                if (p.Rut == id)
+                                if (p.rut == id)
                                 {
                                     Seccion s = new Seccion(ar, p);
-                                    empresa.lista_secciones.Add(s);
+                                    empresa.Lista_secciones.Add(s);
                                     w = 1;
                                     break;
                                 }
@@ -229,10 +229,10 @@ namespace lab6
                                 "Registre al Empleado:");
                             empresa.agregar_personal();
                             foreach (Persona p in empresa.Personal_empresa)
-                                if (p.Rut == id)
+                                if (p.rut == id)
                                 {
                                     Seccion s = new Seccion(ar, p);
-                                    empresa.lista_secciones.Add(s);
+                                    empresa.Lista_secciones.Add(s);
                                     w = 1;
                                     break;
                                 }
@@ -253,10 +253,10 @@ namespace lab6
                         do
                         {
                             foreach (Persona p in empresa.Personal_empresa)
-                                if (p.Rut == id)
+                                if (p.rut == id)
                                 {
                                     Bloque area = new Bloque(ar, p);
-                                    empresa.lista_bloques.Add(area);
+                                    empresa.Lista_bloques.Add(area);
                                     Console.Clear();
                                     Console.WriteLine("Debe Ingresar el Personal que trabaja en el Bloque");
                                     empresa.agregar_per_bloque(area);
@@ -271,10 +271,10 @@ namespace lab6
                                 "Registre al Empleado:");
                             empresa.agregar_personal();
                             foreach (Persona p in empresa.Personal_empresa)
-                                if (p.Rut == id)
+                                if (p.rut == id)
                                 {
                                     Bloque area = new Bloque(ar, p);
-                                    empresa.lista_bloques.Add(area);
+                                    empresa.Lista_bloques.Add(area);
                                     Console.Clear();
                                     Console.WriteLine("Debe Ingresar el Personal que trabaja en el Bloque");
                                     empresa.agregar_per_bloque(area);
@@ -295,9 +295,8 @@ namespace lab6
                 Console.WriteLine("Debe agregar los Departamentos de cada area.");
                 List<string> nom_area = new List<string>();
                 int num = 1;
-                foreach (Area aa in empresa.lista_areas)
+                foreach (Area aa in empresa.Lista_areas)
                 {
-                    
                     nom_area.Add(aa.name);
                     num++;
                 }
@@ -311,7 +310,7 @@ namespace lab6
                     nom_area.Remove(criterio);
                     Console.WriteLine("ENTRE--------------------------------");
 
-                    foreach (Area area in empresa.lista_areas)
+                    foreach (Area area in empresa.Lista_areas)
                     {
                         if (area.name == criterio)
                         {
@@ -320,7 +319,7 @@ namespace lab6
                             Console.WriteLine("Debe agregar las Secciones de cada Departamento.");
                             List<string> nom_depto = new List<string>();
                             num = 1;
-                            foreach (Departamento dd in area.lista_departamentos)
+                            foreach (Departamento dd in area.Lista_departamentos)
                             {
                                 nom_depto.Add(dd.name);
                                 num++;
@@ -332,7 +331,7 @@ namespace lab6
                                 criterio = "\0";
                                 criterio = ShowOptions(nom_depto);
                                 nom_depto.Remove(criterio);
-                                foreach (Departamento dpto in area.lista_departamentos)
+                                foreach (Departamento dpto in area.Lista_departamentos)
                                 {
                                     if (dpto.name == criterio)
                                     {
@@ -341,7 +340,7 @@ namespace lab6
                                         Console.WriteLine("Debe agregar los Bloques de cada Seccion.");
                                         List<string> nom_sec = new List<string>();
                                         num = 1;
-                                        foreach (Seccion ss in dpto.lista_secciones)
+                                        foreach (Seccion ss in dpto.Lista_secciones)
                                         {
                                             nom_sec.Add(ss.name);
                                             num++;
@@ -354,7 +353,7 @@ namespace lab6
                                             criterio = "\0";
                                             criterio = ShowOptions(nom_sec);
                                             nom_sec.Remove(criterio);
-                                            foreach (Seccion se in dpto.lista_secciones)
+                                            foreach (Seccion se in dpto.Lista_secciones)
                                             {
                                                 if (se.name == criterio)
                                                 {
@@ -392,7 +391,7 @@ namespace lab6
                 Console.WriteLine("Debe agregar las Secciones de cada Departamento.");
                 List<string> nom_depto = new List<string>();
                 int num = 1;
-                foreach (Departamento depto in empresa.lista_dptos)
+                foreach (Departamento depto in empresa.Lista_dptos)
                 {
                     nom_depto.Add(depto.name);
                     num++;
@@ -404,7 +403,7 @@ namespace lab6
                     string criterio = "\0";
                     criterio = ShowOptions(nom_depto);
                     nom_depto.Remove(criterio);
-                    foreach (Departamento dpto in empresa.lista_dptos)
+                    foreach (Departamento dpto in empresa.Lista_dptos)
                     {
                         if (dpto.name == criterio)
                         {
@@ -416,7 +415,7 @@ namespace lab6
                             Console.WriteLine("Debe agregar los Bloques de cada Seccion.");
                             List<string> nom_sec = new List<string>();
                             num = 1;
-                            foreach (Seccion seccion in dpto.lista_secciones)
+                            foreach (Seccion seccion in dpto.Lista_secciones)
                             {
                                 nom_sec.Add(seccion.name);
                                 num++;
@@ -428,7 +427,7 @@ namespace lab6
                                 criterio = "\0";
                                 criterio = ShowOptions(nom_sec);
                                 nom_sec.Remove(criterio);
-                                foreach (Seccion se in dpto.lista_secciones)
+                                foreach (Seccion se in dpto.Lista_secciones)
                                 {
                                     if (se.name == criterio)
                                     {
@@ -457,7 +456,7 @@ namespace lab6
                 Console.WriteLine("Debe agregar los Bloques de cada Seccion.");
                 List<string> nom_sec = new List<string>();
                 int num = 1;
-                foreach (Seccion seccion in empresa.lista_secciones)
+                foreach (Seccion seccion in empresa.Lista_secciones)
                 {
                     nom_sec.Add(seccion.name);
                     serial(empresa);
@@ -471,7 +470,7 @@ namespace lab6
                     string criterio = "\0";
                     criterio = ShowOptions(nom_sec);
                     nom_sec.Remove(criterio);
-                    foreach (Seccion se in empresa.lista_secciones)
+                    foreach (Seccion se in empresa.Lista_secciones)
                     {
                         if (se.name == criterio)
                         {
@@ -513,18 +512,18 @@ namespace lab6
 
                 Console.WriteLine("NOMBRE EMPRESA: "+empresa.Name);
                 
-                if (empresa.lista_areas.Count() != 0)
+                if (empresa.Lista_areas.Count() != 0)
                 {
-                    foreach(Area area in empresa.lista_areas)
+                    foreach(Area area in empresa.Lista_areas)
                     {
                         area.Info_area();
-                        foreach(Departamento depto in area.lista_departamentos)
+                        foreach(Departamento depto in area.Lista_departamentos)
                         {
                             depto.Info_depto();
-                            foreach(Seccion seccion in depto.lista_secciones)
+                            foreach(Seccion seccion in depto.Lista_secciones)
                             {
                                 seccion.Info_seccion();
-                                foreach(Bloque bloque in seccion.lista_bloquess)
+                                foreach(Bloque bloque in seccion.Lista_bloquess)
                                 {
                                     bloque.Info_bloque();
                                 }
@@ -532,27 +531,27 @@ namespace lab6
                         }
                     }
                 }
-                else if (empresa.lista_dptos.Count() != 0)
+                else if (empresa.Lista_dptos.Count() != 0)
                 {
-                    foreach (Departamento depto in empresa.lista_dptos)
+                    foreach (Departamento depto in empresa.Lista_dptos)
                     {
                         depto.Info_depto();
-                        foreach (Seccion seccion in depto.lista_secciones)
+                        foreach (Seccion seccion in depto.Lista_secciones)
                         {
                             seccion.Info_seccion();
-                            foreach (Bloque bloque in seccion.lista_bloquess)
+                            foreach (Bloque bloque in seccion.Lista_bloquess)
                             {
                                 bloque.Info_bloque();
                             }
                         }
                     }
                 }
-                else if (empresa.lista_secciones.Count() != 0)
+                else if (empresa.Lista_secciones.Count() != 0)
                 {
-                    foreach (Seccion seccion in empresa.lista_secciones)
+                    foreach (Seccion seccion in empresa.Lista_secciones)
                     {
                         seccion.Info_seccion();
-                        foreach (Bloque bloque in seccion.lista_bloquess)
+                        foreach (Bloque bloque in seccion.Lista_bloquess)
                         {
                             bloque.Info_bloque();
                         }
@@ -560,7 +559,7 @@ namespace lab6
                 }
                 else
                 {
-                    foreach (Bloque bloque in empresa.lista_bloques)
+                    foreach (Bloque bloque in empresa.Lista_bloques)
                     {
                         bloque.Info_bloque();
                     }

@@ -22,6 +22,7 @@ namespace lab6
             this.encargado_seccion = encargado_seccion;
         }
 
+        public List<Bloque> Lista_bloquess { get => lista_bloquess; set => lista_bloquess = value; }
 
         public void Info_seccion()
         {

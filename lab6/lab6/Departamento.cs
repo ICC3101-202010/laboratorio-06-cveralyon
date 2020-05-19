@@ -22,6 +22,8 @@ namespace lab6
             this.encargado_depto = encargado_depto;
         }
 
+        public List<Seccion> Lista_secciones { get => lista_secciones; set => lista_secciones = value; }
+
         public void Info_depto()
         {
             Console.WriteLine("Nombre de Bloque: " + name + "// Encargado de Bloque: " + encargado_depto.Name);

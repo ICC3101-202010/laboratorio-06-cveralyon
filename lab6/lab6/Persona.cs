@@ -11,10 +11,10 @@ namespace lab6
     [Serializable]
     public class Persona
     {
-        private string name;
-        private string last;
-        private int rut;
-        private string cargo;
+        public string name;
+        public string last;
+        public int rut;
+        public string cargo;
 
         public string Name { get => name; set => name = value; }
         public string Last { get => last; set => last = value; }
