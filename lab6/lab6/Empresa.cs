@@ -13,19 +13,15 @@ namespace lab6
     {
         private string name;
         private int rut;
-        private List<Persona> personal_empresa = new List<Persona>();
-        private List<Area> lista_areas = new List<Area>();
-        private List<Departamento> lista_dptos = new List<Departamento>();
-        private List<Seccion> lista_secciones = new List<Seccion>();
-        private List<Bloque> lista_bloques = new List<Bloque>();
+        public List<Persona> Personal_empresa = new List<Persona>();
+        public List<Area> lista_areas = new List<Area>();
+        public List<Departamento> lista_dptos = new List<Departamento>();
+        public List<Seccion> lista_secciones = new List<Seccion>();
+        public List<Bloque> lista_bloques = new List<Bloque>();
 
         public string Name { get => name; set => name = value; }
         public int Rut { get => rut; set => rut = value; }
-        public List<Area> Lista_areas { get => lista_areas; set => lista_areas = value; }
-        public List<Departamento> Lista_dptos { get => lista_dptos; set => lista_dptos = value; }
-        public List<Seccion> Lista_secciones { get => lista_secciones; set => lista_secciones = value; }
-        public List<Bloque> Lista_bloques { get => lista_bloques; set => lista_bloques = value; }
-        public List<Persona> Personal_empresa { get => personal_empresa; set => personal_empresa = value; }
+        
 
         public static int Numero(int o) // verifica que el input  sea un numero dentro del rango requerido
         {
@@ -83,18 +79,20 @@ namespace lab6
             this.rut = rut;
         }
 
+
+
         public void agregar_personal()
         {
-            Console.WriteLine("Ingrese el Nombre del Empleado:");
+            Console.WriteLine("Ingrese el NOMBRE del Empleado:");
             string nombre = Palabra();
-            Console.WriteLine("Ingrese el Apellido del Empleado:");
+            Console.WriteLine("Ingrese el APELLIDO del Empleado:");
             string apellido = Palabra();
             Console.WriteLine("Ingrese el RUT del Empleado:");
             int rut = Numero(999999999);
-            Console.WriteLine("Ingrese el Cargo del Empleado:");
+            Console.WriteLine("Ingrese el CARGO del Empleado:");
             string cargo = Palabra();
             Persona persona = new Persona(nombre, apellido, rut, cargo);
-            personal_empresa.Add(persona);
+            Personal_empresa.Add(persona);
             
         }
 
@@ -121,7 +119,7 @@ namespace lab6
                 } while (w != 1);
                 if (w != 1)
                 {
-                    Console.WriteLine("Rut incorrecto, posiblemente el empleado ingresado aun no ha sido registrado\n" +
+                    Console.WriteLine("\n====Rut incorrecto, posiblemente el empleado ingresado aun no ha sido registrado====\n" +
                         "Registre al Empleado:");
                     agregar_personal();
                     foreach (Persona p in Personal_empresa)
@@ -143,8 +141,6 @@ namespace lab6
             int w = 0, seg;
             do
             {
-                Console.WriteLine("Ingrese el nombre de un Empleado:");
-                string ar = Palabra();
                 Console.WriteLine("Ingrese el Rut del Empleado:");
                 int id = Numero(999999999);
                 do
@@ -156,11 +152,11 @@ namespace lab6
                             w = 1;
                             break;
                         }
-                    break;
+                    
                 } while (w != 1);
                 if (w != 1)
                 {
-                    Console.WriteLine("Rut incorrecto, posiblemente el empleado ingresado aun no ha sido registrado\n" +
+                    Console.WriteLine("\n====Rut incorrecto, posiblemente el empleado ingresado aun no ha sido registrado====\n" +
                         "Registre al Empleado:");
                     agregar_personal();
                     foreach (Persona p in Personal_empresa)
@@ -171,7 +167,7 @@ namespace lab6
                             break;
                         }
                 }
-                Console.WriteLine("Si desea agregar otro Bloque ingrese 1 de lo contrario ingrese 2");
+                Console.WriteLine("Si desea agregar otro EMPLEADO al  Bloque ingrese 1 de lo contrario ingrese 2");
                 seg = Numero(2);
             } while (seg != 2);
         }
@@ -192,6 +188,7 @@ namespace lab6
                         {
                             Bloque area = new Bloque(ar, p);
                             seccion.lista_bloquess.Add(area);
+                            Console.Clear();
                             Console.WriteLine("Debe Ingresar el Personal que trabaja en el Bloque");
                             agregar_per_bloque(area);
                             w = 1;
@@ -201,7 +198,7 @@ namespace lab6
                 } while (w != 1);
                 if (w != 1)
                 {
-                    Console.WriteLine("Rut incorrecto, posiblemente el empleado ingresado aun no ha sido registrado\n" +
+                    Console.WriteLine("\n====Rut incorrecto, posiblemente el empleado ingresado aun no ha sido registrado====\n" +
                         "Registre al Empleado:");
                     agregar_personal();
                     foreach (Persona p in Personal_empresa)
@@ -209,6 +206,9 @@ namespace lab6
                         {
                             Bloque area = new Bloque(ar, p);
                             seccion.lista_bloquess.Add(area);
+                            Console.Clear();
+                            Console.WriteLine("Debe Ingresar el Personal que trabaja en el Bloque");
+                            agregar_per_bloque(area);
                             w = 1;
                             break;
                         }
@@ -243,7 +243,7 @@ namespace lab6
                 } while (w != 1);
                 if (w != 1)
                 {
-                    Console.WriteLine("Rut incorrecto, posiblemente el empleado ingresado aun no ha sido registrado\n" +
+                    Console.WriteLine("\n====Rut incorrecto, posiblemente el empleado ingresado aun no ha sido registrado====\n" +
                         "Registre al Empleado:");
                     agregar_personal();
                     foreach (Persona p in Personal_empresa)

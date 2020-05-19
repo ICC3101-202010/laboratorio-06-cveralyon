@@ -20,10 +20,5 @@ namespace lab6
         public Persona Encargado { get => encargado; set => encargado = value; }
         
 
-        protected Division(string name, Persona encargado)
-        {
-            this.name = name;
-            this.encargado = encargado;
-        }
     }
 }

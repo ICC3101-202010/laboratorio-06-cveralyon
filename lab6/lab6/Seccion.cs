@@ -16,14 +16,14 @@ namespace lab6
 
         public List<Bloque> lista_bloquess = new List<Bloque>();
 
-        public Seccion(string name, Persona encargado_seccion) : base(name, encargado_seccion)
+        public Seccion(string name, Persona encargado_seccion)
         {
             this.name = name;
             this.encargado_seccion = encargado_seccion;
         }
 
 
-        public void info_seccion()
+        public void Info_seccion()
         {
             Console.WriteLine("Nombre de Bloque: " + name + "// Encargado de Bloque: " + encargado_seccion.Name);
             

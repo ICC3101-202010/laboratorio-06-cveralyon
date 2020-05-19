@@ -15,13 +15,13 @@ namespace lab6
         public Persona encargado_bloque;
         public List<Persona> personal_general = new List<Persona>();
 
-        public Bloque(string name, Persona encargado_bloque) : base(name, encargado_bloque)
+        public Bloque(string name, Persona encargado_bloque)
         {
             this.name = name;
             this.encargado_bloque = encargado_bloque;
         }
 
-        public void info_bloque()
+        public void Info_bloque()
         {
             Console.WriteLine("Nombre de Bloque: " + name + "// Encargado de Bloque: " + encargado_bloque.Name);
             Console.WriteLine("Personal de Bloque: ");
