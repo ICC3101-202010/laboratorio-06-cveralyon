@@ -7,6 +7,7 @@ using System.Runtime.Serialization;
 using System.Runtime.Serialization.Formatters.Binary;
 using System.Threading.Tasks;
 using System.Threading;
+using System.Linq;
 
 namespace lab6
 {
@@ -550,7 +551,7 @@ namespace lab6
                 }
 
                 Console.WriteLine(empresa.Name);
-                if (empresa.Lista_areas != null)
+                if (empresa.Lista_areas.Count() != 0)
                 {
                     foreach(Area area in empresa.Lista_areas)
                     {
@@ -569,7 +570,7 @@ namespace lab6
                         }
                     }
                 }
-                else if (empresa.Lista_dptos != null)
+                else if (empresa.Lista_dptos.Count() != 0)
                 {
                     foreach (Departamento depto in empresa.Lista_dptos)
                     {
@@ -584,7 +585,7 @@ namespace lab6
                         }
                     }
                 }
-                else if (empresa.Lista_secciones!= null)
+                else if (empresa.Lista_secciones.Count() != 0)
                 {
                     foreach (Seccion seccion in empresa.Lista_secciones)
                     {
@@ -603,6 +604,7 @@ namespace lab6
                     }
 
                 }
+                Thread.Sleep(5000);
             }
 
             
